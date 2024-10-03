@@ -13,3 +13,16 @@ the following form: YYYY.0M.0D.
 - Designed a Car Fuel Monitor component
 - Designed a Home Thermostat component
 - Designed a Stock Tracker component
+
+
+## 2024.10.03
+
+### Added
+
+- Designed a proof of concept for Car Fuel Monitor component
+
+### Updated
+
+- Changed design to include the car fuel monitor implementation using double. Implemented the methods addFuel, isOutOfFuel, and getFuelLevel.
+
+```
