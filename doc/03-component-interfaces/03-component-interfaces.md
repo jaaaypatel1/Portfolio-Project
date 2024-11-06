@@ -1,8 +1,8 @@
 # Portfolio Part 3: Component Interfaces
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Jay Patel**:
+- **5500**:
+- **10/17 @3:10 PM EST**: 
 
 ## Assignment Overview
 
@@ -43,8 +43,6 @@ component to be able to do? Now that you've had a chance to create a
 proof-of-concept, you should be able to answer this question to some extent.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -104,7 +102,7 @@ do good work.
    to use mathematical notation in your contracts.
 4. (3 points) The kernel interface must, at the very least, inherit from
    `Standard` and compile. In addition, it must contain a handful of minimally
-   viable method headers (i.e., the minimum number of methods needed to model
+   viable method headers (i.e., the minimum number of methods needed to model       
    the data type). Do not include fields or method implementations. However, you
    may include any nested interfaces needed for your data type. You may also
    include constants that may be helpful throughout the design. Similarly, the
@@ -145,8 +143,6 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
-
 ## Assignment Tasks
 
 Your primary task for this assignment is to draft two interfaces in line with
@@ -168,7 +164,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -203,7 +198,7 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
+
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
