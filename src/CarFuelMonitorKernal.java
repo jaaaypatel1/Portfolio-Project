@@ -14,7 +14,7 @@
  *     this.getCurrentFuelLevel() = 0
  * </pre>
  */
-public interface CarFuelMonitorKernal {
+public interface CarFuelMonitorKernel extends Standard<CarFuelMonitor> {
 
     /**
      * Adds the specified amount of fuel to the current fuel level.
