@@ -1,7 +1,9 @@
+import components.standard.Standard;
+
 /**
- * CarFuelMonitorKernel provides an way to monitor and manage the
- * fuel level of a car. It allows adding fuel, checking whether the car is out
- * of fuel, and retrieving the current fuel level.
+ * CarFuelMonitorKernel provides an way to monitor and manage the fuel level of
+ * a car. It allows adding fuel, checking whether the car is out of fuel, and
+ * retrieving the current fuel level.
  *
  * <p>
  * The fuel level is represented as an integer, where the value 0 indicates that
@@ -14,7 +16,7 @@
  *     this.getCurrentFuelLevel() = 0
  * </pre>
  */
-public interface CarFuelMonitorKernal {
+public interface CarFuelMonitorKernal extends Standard<CarFuelMonitor> {
 
     /**
      * Adds the specified amount of fuel to the current fuel level.

@@ -10,11 +10,13 @@
  * times, i.e., the fuel level cannot drop below zero.
  * </p>
  *
- * @initially <pre>
- *     this.getCurrentFuelLevel() = 0
- * </pre>
+ * @initially
+ *
+ *            <pre>
+ *            this.getCurrentFuelLevel() = 0
+ *            </pre>
  */
-public interface CarFuelMonitorEnhanced {
+public interface CarFuelMonitorEnhanced extends CarFuelMonitorKernal {
 
     /**
      * Adds the specified amount of fuel to the current fuel level.
@@ -34,6 +36,7 @@ public interface CarFuelMonitorEnhanced {
      * @ensures this.getCurrentFuelLevel() = min(#this.getCurrentFuelLevel() +
      *          x, MAX_FUEL_CAPACITY)
      */
+    @Override
     void addFuel(int x);
 
     /**
@@ -49,6 +52,7 @@ public interface CarFuelMonitorEnhanced {
      * @return true if the fuel level is 0 (empty tank), false otherwise
      * @ensures isOutOfFuel = (this.getCurrentFuelLevel() == 0)
      */
+    @Override
     boolean isOutOfFuel();
 
     /**
@@ -63,5 +67,6 @@ public interface CarFuelMonitorEnhanced {
      * @return the current fuel level (a non-negative integer)
      * @ensures getCurrentFuelLevel >= 0
      */
+    @Override
     int getCurrentFuelLevel();
 }

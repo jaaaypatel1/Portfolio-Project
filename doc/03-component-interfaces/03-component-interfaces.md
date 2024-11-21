@@ -2,7 +2,7 @@
 
 - **Jay Patel**:
 - **5500**:
-- **10/17 @3:10 PM EST**: 
+- **10/17 @3:10 PM EST**:
 
 ## Assignment Overview
 
@@ -102,7 +102,7 @@ do good work.
    to use mathematical notation in your contracts.
 4. (3 points) The kernel interface must, at the very least, inherit from
    `Standard` and compile. In addition, it must contain a handful of minimally
-   viable method headers (i.e., the minimum number of methods needed to model       
+   viable method headers (i.e., the minimum number of methods needed to model
    the data type). Do not include fields or method implementations. However, you
    may include any nested interfaces needed for your data type. You may also
    include constants that may be helpful throughout the design. Similarly, the
@@ -121,7 +121,7 @@ hierarchy diagram using whatever tools you would like. Then, include a picture
 of it in this folder. You may also embed it just below using markdown syntax
 (i.e., `[ALT TEXT](path/to/file)`).
 
-<!-- TODO: make a diagram of your component hierarchy then delete this comment -->
+![hierarchy image](../../images/IMG_0096.png)
 
 To start making your interfaces, make a branch off of main in your new repo
 called something like `interfaces`. There are many ways to do this, but my
@@ -247,8 +247,6 @@ markdown as HTML or a PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
 [pottery-fails]: https://www.youtube.com/shorts/Kqb9l113F_0?feature=share
