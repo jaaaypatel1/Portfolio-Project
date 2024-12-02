@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+
+## YYYY.MM.DD
+
+### Added
+
+- Designed abstract class for CarFuelMonitor component, implemented toString and equals method for this class. Also implemented the methods mentioned in CarFuelMonitorEnhanced: drive, refuel, isLowFuel.
+
+### Updated
+
+- Changed design to include all of the implementations for the files in the Secondary Interface.
+
+
 ## 2024.10.17
 
 ### Added

@@ -4,7 +4,7 @@
  * retrieving the current fuel level.
  *
  * <p>
- * The fuel level is represented as an integer, where the value 0 indicates that
+ * The fuel level is represented as an double, where the value 0 indicates that
  * the car is out of fuel. Any positive value indicates the amount of fuel
  * currently available. The interface assumes a non-negative fuel level at all
  * times, i.e., the fuel level cannot drop below zero.
@@ -14,54 +14,45 @@
  *     this.getCurrentFuelLevel() = 0
  * </pre>
  */
-public interface CarFuelMonitor extends CarFuelMonitorKernel {
+public interface CarFuelMonitorEnhanced extends CarFuelMonitorKernel {
 
     /**
-     * Adds the specified amount of fuel to the current fuel level.
+     * Simulates driving by decreasing the fuel level based on fuel efficiency.
+     * Calculates and returns the distance covered.
      *
-     * <p>
-     * If the fuel added exceeds the car's fuel tank capacity, the fuel level
-     * will be capped at the maximum capacity. It is assumed that the fuel level
-     * is non-negative and cannot exceed the defined maximum capacity (this
-     * constraint would typically be implemented in the concrete class that
-     * implements this interface).
-     * </p>
-     *
-     * @param x
-     *            the amount of fuel to add; must be non-negative
-     * @updates this
-     * @requires x >= 0
-     * @ensures this.getCurrentFuelLevel() = min(#this.getCurrentFuelLevel() +
-     *          x, MAX_FUEL_CAPACITY)
+     * @param fuelUsed
+     *            the amount of fuel intended to be used
+     * @param efficiency
+     *            the fuel efficiency (fuel consumed per unit distance)
+     * @return the actual distance covered based on fuel used
+     * @requires fuelUsed >= 0 and efficiency > 0
+     * @ensures this.fuelLevel = #this.fuelLevel - [actual fuel used]
      */
-    void addFuel(int x);
+    double drive(double fuelUsed, double efficiency);
 
     /**
-     * Checks whether the fuel level is zero, indicating that the car is out of
-     * fuel.
+     * Refuels the car with the specified amount of fuel, but does not exceed
+     * max capacity.
      *
-     * <p>
-     * This method returns {@code true} if the current fuel level is 0, and
-     * {@code false} otherwise. The method does not alter the state of the fuel
-     * monitor.
-     * </p>
-     *
-     * @return true if the fuel level is 0 (empty tank), false otherwise
-     * @ensures isOutOfFuel = (this.getCurrentFuelLevel() == 0)
+     * @param amount
+     *            the amount of fuel to add
+     * @param maxCapacity
+     *            the max fuel capacity of the car
+     * @return the actual amount of fuel added
+     * @requires amount >= 0 and maxCapacity >= this.fuelLevel
+     * @ensures this.fuelLevel = min(#this.fuelLevel + amount, maxCapacity)
      */
-    boolean isOutOfFuel();
+    double refuel(double amount, double maxCapacity);
 
     /**
-     * Retrieves the current fuel level of the car.
+     * Checks if the car has enough fuel to reach the destination.
      *
-     * <p>
-     * The fuel level represents the amount of fuel currently in the tank. This
-     * value is guaranteed to be non-negative and less than or equal to the
-     * maximum fuel capacity of the car.
-     * </p>
-     *
-     * @return the current fuel level (a non-negative integer)
-     * @ensures getCurrentFuelLevel >= 0
+     * @param distanceToDestination
+     *            the distance to the destination
+     * @param fuelEfficiency
+     *            the car's fuel efficiency (e.g., gallons per mile)
+     * @return true if there is not enough fuel, false otherwise
      */
-    int getCurrentFuelLevel();
+    boolean isLowFuel(double distanceToDestination, double fuelEfficiency);
+
 }
