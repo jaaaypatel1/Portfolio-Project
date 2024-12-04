@@ -7,7 +7,19 @@ and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
 
-## YYYY.MM.DD
+## 2024.12.03
+
+### Added
+
+- Designed kernel implementation for CarFuelMonitor component, implemented the transferFrom, newInstance, and clear methods, as well as the methods mentioned in the CarFuelMonitorKernal interface: addFuel, isOutOfFuel, and getFuelLevel.
+
+### Updated
+
+- Changed design to include the kernal implementation for the methods in the CarFuelMonitorKernal interface.
+
+
+
+## 2024.12.01
 
 ### Added
 
@@ -15,7 +27,7 @@ the following form: YYYY.0M.0D.
 
 ### Updated
 
-- Changed design to include all of the implementations for the files in the Secondary Interface.
+- Changed design to include all of the implementations for the methods in the Secondary Interface.
 
 
 ## 2024.10.17
@@ -46,9 +58,6 @@ the following form: YYYY.0M.0D.
 - Designed a Car Fuel Monitor component
 - Designed a Home Thermostat component
 - Designed a Stock Tracker component
-
-
-
 
 ```
 

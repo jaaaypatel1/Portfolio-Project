@@ -16,7 +16,7 @@ import components.standard.Standard;
  *     this.getCurrentFuelLevel() = 0
  * </pre>
  */
-public interface CarFuelMonitorKernel extends Standard<CarFuelMonitor> {
+public interface CarFuelMonitorKernel extends Standard<CarFuelMonitor2> {
 
     /**
      * Adds the specified amount of fuel to the current fuel level.
@@ -65,5 +65,5 @@ public interface CarFuelMonitorKernel extends Standard<CarFuelMonitor> {
      * @return the current fuel level (a non-negative integer)
      * @ensures getCurrentFuelLevel >= 0
      */
-    int getFuelLevel();
+    double getFuelLevel();
 }

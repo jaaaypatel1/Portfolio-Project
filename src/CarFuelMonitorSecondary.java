@@ -1,21 +1,13 @@
+
 /**
  * Layered implementations of secondary methods for {@code CarFuelMonitor}.
  *
  * @author Jay Patel
  */
-public abstract class CarFuelMonitorSecondary
-        implements CarFuelMonitorEnhanced {
+public abstract class CarFuelMonitorSecondary implements CarFuelMonitor {
+
     /**
-     * Simulates driving by decreasing the fuel level based on fuel efficiency.
-     * Calculates and returns the distance covered.
      *
-     * @param fuelUsed
-     *            the amount of fuel intended to be used
-     * @param efficiency
-     *            the fuel efficiency (fuel consumed per unit distance)
-     * @return the actual distance covered based on fuel used
-     * @requires fuelUsed >= 0 and efficiency > 0
-     * @ensures this.fuelLevel = #this.fuelLevel - [actual fuel used]
      */
     @Override
     public double drive(double fuelUsed, double efficiency) {
@@ -30,16 +22,7 @@ public abstract class CarFuelMonitorSecondary
     }
 
     /**
-     * Refuels the car with the specified amount of fuel, but does not exceed
-     * max capacity.
      *
-     * @param amount
-     *            the amount of fuel to add
-     * @param maxCapacity
-     *            the max fuel capacity of the car
-     * @return the actual amount of fuel added
-     * @requires amount >= 0 and maxCapacity >= this.fuelLevel
-     * @ensures this.fuelLevel = min(#this.fuelLevel + amount, maxCapacity)
      */
     @Override
     public double refuel(double amount, double maxCapacity) {
@@ -53,13 +36,7 @@ public abstract class CarFuelMonitorSecondary
     }
 
     /**
-     * Checks if the car has enough fuel to reach the destination.
      *
-     * @param distanceToDestination
-     *            the distance to the destination
-     * @param fuelEfficiency
-     *            the car's fuel efficiency (e.g., gallons per mile)
-     * @return true if there is not enough fuel, false otherwise
      */
     @Override
     public boolean isLowFuel(double distanceToDestination,
@@ -95,5 +72,13 @@ public abstract class CarFuelMonitorSecondary
     public String toString() {
         return "CarFuelMonitorSecondary{" + "fuelLevel=" + this.getFuelLevel()
                 + '}';
+    }
+
+    /**
+     * hashCode method implementation.
+     */
+    @Override
+    public int hashCode() {
+        return Double.hashCode(this.getFuelLevel());
     }
 }
