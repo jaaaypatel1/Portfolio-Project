@@ -1,8 +1,8 @@
 # Portfolio Part 5: Kernel Implementation
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Jay Patel**:
+- **5500**:
+- **11/15 @4:10 PM EST**:
 
 ## Assignment Overview
 
@@ -40,8 +40,6 @@ examples of these.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -69,13 +67,14 @@ what we're hoping you will learn through this particular aspect of the portfolio
 project. Specifically, students should be able to:
 
 1. Select a reasonable representation for a kernel implementation
+
 2. Provide a representation invariant (i.e., convention) and abstraction
    function (i.e., correspondence) for a kernel implementation
+
 3. Carry out kernel and Standard method implementations as well as constructor
    implementations given a contract, a convention, and a correspondence
 
 ## Assignment Rubric
-
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
 are meant to provide ongoing feedback in the learning process. Therefore,
@@ -89,10 +88,12 @@ do good work.
    choose one that would be easy to work with. Also, remember that part of
    selecting a representation is also explaining which configurations are valid
    and how the representation will be interpreted.
+
 2. (3 points) In the source code, you must provide that actual convention and
    correspondence that you may have discussed below. There is no expectation
    that either the convention or correspondence are written using mathematical
    notation.
+
 3. (4 points) The kernel implementation must have implementations for all kernel
    and Standard methods as well as at least one constructor. Everything you have
    learned this semester about kernel implementations could reasonably be
@@ -112,7 +113,9 @@ do good work.
 > discuss how that representation will be restricted (i.e., by convention)
 > and interpreted (i.e., by correspondence).
 
-<!-- TODO: select a representation and explain why -->
+
+The representation that I chose to implement CarFuelMonitor was double, I chose this because it provides a simple implementation for a pretty simple problem. This representation will be restricted to any number greater than 0, since there cannot be a negative amount of fuel. This implementation will be interpreted as the amount of fuel left in the fuel tank and will always be above 0. If I were to model this data structure I could possibly use NaturalNumber from the OSU CSE components, since it mimics how a real car fuel monitor works in a way since it cannot be negative.
+
 
 > To start making your kernel implementation, make a branch off of main in your
 > new repo called something like `kernel-implementation`. There are many ways to
@@ -134,10 +137,8 @@ do good work.
 > rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 > and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
-
 Your primary task for this assignment is to create a kernel implementation that
 falls from your design up to this point. Since you have done this several times
 in the past, there should be no surprises about what goes into a kernel
