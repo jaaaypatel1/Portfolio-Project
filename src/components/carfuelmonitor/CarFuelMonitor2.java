@@ -1,3 +1,5 @@
+package components.carfuelmonitor;
+
 /**
  *
  * {@code CarFuelMonitor2} represented as a {@code double} with implementations
@@ -56,8 +58,6 @@ public final class CarFuelMonitor2 extends CarFuelMonitorSecondary {
      */
     @Override
     public void addFuel(double amount) {
-        assert amount >= 0 : "Violation of: amount >= 0";
-
         this.fuelLevel += amount;
     }
 
@@ -97,10 +97,9 @@ public final class CarFuelMonitor2 extends CarFuelMonitorSecondary {
      *
      */
     @Override
-    public void transferFrom(CarFuelMonitor2 source) {
+    public void transferFrom(CarFuelMonitor source) {
         assert source != null : "Violation of: source is not null";
-        this.fuelLevel = source.fuelLevel;
-        source.fuelLevel = 0.0;
+        this.fuelLevel = source.getFuelLevel();
     }
 
 }

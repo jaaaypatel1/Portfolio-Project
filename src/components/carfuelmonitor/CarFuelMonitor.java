@@ -1,3 +1,4 @@
+package components.carfuelmonitor;
 
 /**
  * CarFuelMonitorKernel provides an way to monitor and manage the fuel level of
