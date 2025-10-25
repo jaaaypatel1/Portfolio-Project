@@ -2,7 +2,7 @@
 
 - **Jay Patel**:
 - **5500**:
-- **10/17 @3:10 PM EST**: 
+- **10/17 @3:10 PM EST**:
 
 ## Assignment Overview
 
@@ -102,7 +102,7 @@ do good work.
    to use mathematical notation in your contracts.
 4. (3 points) The kernel interface must, at the very least, inherit from
    `Standard` and compile. In addition, it must contain a handful of minimally
-   viable method headers (i.e., the minimum number of methods needed to model       
+   viable method headers (i.e., the minimum number of methods needed to model
    the data type). Do not include fields or method implementations. However, you
    may include any nested interfaces needed for your data type. You may also
    include constants that may be helpful throughout the design. Similarly, the
@@ -120,8 +120,6 @@ diagrams already, so you should be able to draw one. Feel free to make a
 hierarchy diagram using whatever tools you would like. Then, include a picture
 of it in this folder. You may also embed it just below using markdown syntax
 (i.e., `[ALT TEXT](path/to/file)`).
-
-<!-- TODO: make a diagram of your component hierarchy then delete this comment -->
 
 To start making your interfaces, make a branch off of main in your new repo
 called something like `interfaces`. There are many ways to do this, but my

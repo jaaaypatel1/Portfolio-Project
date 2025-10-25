@@ -1,3 +1,4 @@
+package components.carfuelmonitor;
 
 /**
  * Layered implementations of secondary methods for {@code CarFuelMonitor}.
@@ -6,9 +7,6 @@
  */
 public abstract class CarFuelMonitorSecondary implements CarFuelMonitor {
 
-    /**
-     *
-     */
     @Override
     public double drive(double fuelUsed, double efficiency) {
         assert fuelUsed >= 0 : "Violation of: fuelUsed >= 0";
@@ -17,27 +15,25 @@ public abstract class CarFuelMonitorSecondary implements CarFuelMonitor {
         double actualFuelUsed = Math.min(fuelUsed, this.getFuelLevel());
         this.addFuel(-actualFuelUsed);
 
-        double distanceCovered = actualFuelUsed / efficiency;
+        // Update formula to use efficiency as "distance per unit fuel"
+        double distanceCovered = actualFuelUsed * efficiency;
         return distanceCovered;
     }
 
-    /**
-     *
-     */
     @Override
     public double refuel(double amount, double maxCapacity) {
         assert amount >= 0 : "Violation of: amount >= 0";
         assert maxCapacity >= this
                 .getFuelLevel() : "Violation of: maxCapacity >= current fuel level";
 
+        // Calculate the fuel that can be added
         double fuelAdded = Math.min(amount, maxCapacity - this.getFuelLevel());
-        this.addFuel(-fuelAdded);
+
+        // Correctly add fuel without applying a negative sign
+        this.addFuel(fuelAdded);
         return fuelAdded;
     }
 
-    /**
-     *
-     */
     @Override
     public boolean isLowFuel(double distanceToDestination,
             double fuelEfficiency) {
@@ -60,6 +56,11 @@ public abstract class CarFuelMonitorSecondary implements CarFuelMonitor {
         if (obj == null) {
             return false;
         }
+
+        if (!(obj instanceof CarFuelMonitorSecondary)) {
+            return false;
+        }
+
         CarFuelMonitorSecondary other = (CarFuelMonitorSecondary) obj;
         return Double.compare(this.getFuelLevel(), other.getFuelLevel()) == 0;
     }

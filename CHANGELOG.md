@@ -7,6 +7,20 @@ and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
 
+
+## 2024.12.04
+
+### Added
+
+- Designed test suite for CarFuelMonitor component, and polished up other miscelaneous problems.
+- Designed two different use cases for CarFuelMonitor component
+
+### Updated
+
+- Changed design to include CarFuelMonitor2Test.java, and CarFuelMonitorTest.java
+
+
+
 ## 2024.12.03
 
 ### Added
